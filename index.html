@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html">Joruney</a></li>
+                <li><a href="index.html">Journey</a></li>
                 <li><a href="index.html">Contact</a></li>
             </ul>
         </div>
@@ -37,7 +37,7 @@
             <h3>Hello it's Me</h3>
             <h1>Nicholas Yang</h1>
             <h2>Web Developer & Designer</h2>
-            <p> I am a 19 year old student studying at widya dharma pontianak, and I like web programming and the world of web3 or blockchain. I also like editing, and usually I edit comics especially clean and redraw comics. </p>
+            <p> I am a 19 year old student studying at widya dharma pontianak, and I like web programming and the world of web3 or blockchain. I also like editing, and I usually edit comics especially clean and redraw comics. </p>
             <div class= "info-icon">
                 <a href="https://github.com/FroxyZen/" target="_blank"><i class="bi bi-github"></i></a>
                 <a href="###"><i class="bi bi-linkedin"></i></a>
@@ -48,5 +48,68 @@
             <img id="profile_pict" src="assets/AGG07651.JPG">
         </div>
     </div>
+    <div class="Journey">
+        <div id="box-myjourney">
+            <i class="bi bi-feather"></i>
+            <h1 id="My Journey">My Journey</h1>
+        </div>
+        <div class="container-journey">
+            <div class="content-journey">
+                <div class="title">
+                    <p id="Position">Co-Founder</p>
+                    <i class="bi bi-hammer"></i>
+                </div>
+                <p id="Company">Tenshi.Id<p>
+                <p id="Since">Februari 2021 - Juli 2023</p>
+                <p id="Description">I'm a Co-Founder in Tenshi.Id Since 2021 - 2023. It is a scanlation comics website in sub Indonesia,
+                    This website was first created with the name MasterKomik.
+                    My job description is to upload comic projects and mirror comics from other websites and manage staff.
+                </p>
+            </div>
+            <div class="content-journey">
+                <div class="title">
+                    <p id="Position">Freelancer Redrawer</p>
+                    <i class="bi bi-hammer"></i>
+                </div>
+                <p id="Company">Asmotoon.com<p>
+                <p id="Since">July 2024 - now</p>
+                <p id="Description">I'm a Freelancer in Asmooton.com It is a scanlation comics website in sub English which is
+                    Focus on Manga Comics, My job description is to redraw all that need to do.
+                </p>
+            </div>
+            <div class="content-journey">
+                <div class="title">
+                    <p id="Position">Stockist and Stock Manager</p>
+                    <i class="bi bi-hammer"></i>
+                </div>
+                <p id="Company">Utama Motor<p>
+                <p id="Since">Mei 2023 - now</p>
+                <p id="Description"> I am a warehouse stockist who takes goods according to orders and arranges and manages stock of goods
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    const container = document.querySelector('.container-journey');
+    const boxMyJourneyIcon = document.querySelector('#box-myjourney i');
+
+    container.addEventListener('mouseenter', () => {
+        boxMyJourneyIcon.classList.add('highlight');
+    });
+
+    container.addEventListener('mouseleave', () => {
+        boxMyJourneyIcon.classList.remove('highlight');
+    });
+    const contentJourney = document.querySelector('.content-journey');
+    const boxMyJourney = document.getElementById('box-myjourney');
+
+    contentJourney.addEventListener('mouseenter', () => {
+        boxMyJourney.style.transform = 'translateY(20px)';
+    });
+
+    contentJourney.addEventListener('mouseleave', () => {
+        boxMyJourney.style.transform = 'translateY(0)';
+    });
+</script>
 </html>
