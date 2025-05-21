@@ -261,8 +261,25 @@ body {
 }
 
 .content-journey {
-
+    position: relative;
+    padding-bottom: 10px; /* beri ruang untuk garis */
+    margin-bottom: 10px;
 }
+
+.content-journey::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-image: repeating-linear-gradient(
+        to right,
+        #212121 0 7px,
+        transparent 3px 12px 
+    );
+}
+
 
 
 #Position {
