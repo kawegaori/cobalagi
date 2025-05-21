@@ -118,11 +118,37 @@ body {
 }
 
 #text-2 {
-    margin-top: 0.5rem;
+    margin-top: -1rem;
     color: aqua;
     font-size: 35px;
     font-family: Helvetica;
 }
+
+.typing {
+  font-size: 35px;
+  font-family: Helvetica;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid aqua;
+  width: 0;
+  color: aqua;
+  display: inline-block;
+  animation: typing 5s steps(18, end) infinite, blink 0.7s step-end infinite;
+  line-height: 1.5;
+  height: auto;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 22ch }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+
 
 .website-adress {
     color: white;
