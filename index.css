@@ -1,5 +1,4 @@
 body {
-    height: 500vh;
     width: 100%;
     background-image: linear-gradient(#212121, #0c1a32);
 }
@@ -10,6 +9,7 @@ body {
     background-color: #212121;
     position: fixed;
     width: 100%;
+    padding: 5px;
     display: flex;
     z-index: 90;
     border-bottom: 1px solid white;
