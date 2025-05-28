@@ -8,6 +8,7 @@
     <title>Portfolio Nicholas Yang</title>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div class="header">
         <div class="navbar">
             <img src="assets/AGG07651.JPG">
@@ -20,7 +21,7 @@
             </ul>
         </div>
     </div>
-    <div class="content-1" id="home">
+    <div class="content-1 parallax" id="home">
         <div class="icon-content1">
             <i class="bi bi-filetype-html"></i>
             <i class="bi bi-filetype-css"></i>
@@ -51,7 +52,7 @@
     <div class="Journey" id="Journey">
         <div id="box-myjourney">
             <i class="bi bi-feather"></i>
-            <h1 id="My Journey">My Journey</h1>
+            <h1 id="My-Journey">My Journey</h1>
         </div>
         <div class="container-journey">
             <div class="content-journey">
@@ -59,7 +60,7 @@
                     <p id="Position">Co-Founder</p>
                     <i class="bi bi-hammer"></i>
                 </div>
-                <p id="Company">Tenshi.Id<p>
+                <p id="Company">Tenshi.Id</p>
                 <p id="Since">Februari 2021 - Juli 2023</p>
                 <p id="Description">I'm a Co-Founder in Tenshi.Id Since 2021 - 2023. It is a scanlation comics website in sub Indonesia,
                     This website was first created with the name MasterKomik.
@@ -110,7 +111,72 @@
             </div>
         </div>
     </div>
+    <footer class="my-contact">
+        <div class="container-contact">
+            <h2>My Contact</h2>
+            <i class="bi bi-person-lines-fill"></i>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                "value": 80
+                },
+                "color": {
+                "value": "#00ffff"
+                },
+                "shape": {
+                "type": "circle"
+                },
+                "opacity": {
+                "value": 0.5
+                },
+                "size": {
+                "value": 3
+                },
+                "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#00ffff",
+                "opacity": 0.4,
+                "width": 1
+                },
+                "move": {
+                "enable": true,
+                "speed": 2
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": false,
+                    "mode": "push"
+                },
+                "resize": true
+                },
+                "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                    "opacity": 1
+                    }
+                }
+                }
+            },
+            "retina_detect": true
+            });
+        });
+        </script>        
 </body>
+
 <script>
     const container = document.querySelector('.container-journey');
     const boxMyJourneyIcon = document.querySelector('#box-myjourney i');
@@ -131,6 +197,34 @@
 
     contentJourney.addEventListener('mouseleave', () => {
         boxMyJourney.style.transform = 'translateY(0)';
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.content-journey').forEach((elem, index) => {
+        gsap.from(elem, {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            delay: index * 0.2,
+            scrollTrigger: {
+                trigger: elem,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
+    // Optional: animasi fade untuk content-2
+    gsap.from(".content-2", {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".content-2",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        }
     });
 
 </script>
